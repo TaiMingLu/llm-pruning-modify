@@ -18,6 +18,7 @@ sparsities=(
 )
 
 PROJ_DIR=$(pwd)
+export PYTHONPATH=${PROJ_DIR}/src/lib:${PYTHONPATH:-''}
 # model_path=meta-llama/Llama-3.1-8B
 model_path=/n/fs/vision-mix/yx1168/model_ckpts/Llama-3.1-8B
 model_name=$(basename ${model_path})

@@ -9,12 +9,7 @@ from lib.prune import prune_wanda, prune_magnitude, prune_sparsegpt, prune_ablat
 from lib.eval import eval_ppl, eval_zero_shot
 
 print('torch', version('torch'))
-try:
-    print('transformers', version('transformers'))
-except:
-    print(subprocess.check_output(
-        ["git", "-C", os.path.dirname(transformers.__file__), "rev-parse", "--abbrev-ref", "HEAD"], text=True
-    ).strip())
+print('transformers', version('transformers'))
 print('accelerate', version('accelerate'))
 print('# of gpus: ', torch.cuda.device_count())
 
@@ -28,7 +23,7 @@ def get_llm(model_name, cache_dir="llm_weights"):
         # no_split_module_classes=["LlamaDecoderLayer"],
     )
 
-    model.seqlen = min(model.config.max_position_embeddings, 4096)
+    model.seqlen = min(model.config.max_position_embeddings, 8192)
     print("model.seqlen:", model.seqlen)
     return model
 
