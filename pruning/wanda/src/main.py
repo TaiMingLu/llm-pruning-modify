@@ -104,6 +104,8 @@ def main():
         print(f"{args.prune_method}\t{sparsity_ratio:.4f}\t{ppl_test:.4f}", file=f, flush=True)
 
     if args.save_model:
+        if not os.path.exists(args.save_model):
+            os.makedirs(args.save_model)
         model.save_pretrained(args.save_model)
         tokenizer.save_pretrained(args.save_model)
         print(f"model and tokenizer saved to {args.save_model}")

@@ -20,22 +20,21 @@ sparsities=(
 PROJ_DIR=$(pwd)
 # model_path=meta-llama/Llama-3.1-8B
 model_path=/n/fs/vision-mix/yx1168/model_ckpts/Llama-3.1-8B
+model_name=$(basename ${model_path})
 save_dir=${PROJ_DIR}/../../checkpoints
 log_dir=${PROJ_DIR}/outputs
 
 cd $PROJ_DIR/src
 for method in "${methods[@]}"; do
-    hf_dir=${save_dir}/${method}
-    mkdir -p ${hf_dir}
     for sparsity in "${sparsities[@]}"; do
-        echo "Pruning with method: $method and sparsity: $sparsity"
+        echo "[INFO] Pruning with method: $method and sparsity: $sparsity"
         python main.py \
             --model ${model_path} \
             --prune_method ${method} \
             --sparsity_ratio 0.5 \
             --sparsity_type ${sparsity} \
-            --save outputs/${method}/${sparsity} \
-            --save_model ${hf_dir} \
+            --save ${log_dir}/${method}/${sparsity}/ \
+            --save_model ${save_dir}/${method}/${model_name}_${method}_${sparsity} \
             --eval_zero_shot
     done
 done
