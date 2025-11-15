@@ -1,6 +1,6 @@
 # Wanda, SparseGPT, and Magnitude
 
-This directory contains the implementation of Wanda, SparseGPT, and Magnitude pruning for LLMs by Sun et al.
+This directory contains the implementation of Wanda, SparseGPT, and Magnitude pruning for LLMs by Sun et al. For the original README, please see [here](src/README.md).
 
 ## Installation
 ```bash

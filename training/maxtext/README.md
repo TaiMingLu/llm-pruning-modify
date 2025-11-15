@@ -31,7 +31,7 @@ For example, the layout of my bucket is mounted at `/home/zephyr/gcs-bucket`, an
 For a more detailed introduction to buckets, please refer to the [TPU manual](https://github.com/TaiMingLu/TPU-Manual?tab=readme-ov-file#storage) developed by Taiming Lu.
 
 ## Data Preparation
-You may direct download training data for llama3 models from [here](https://huggingface.co/datasets/Zephyr271828/dclm-260b/tree/llama3-array-record), which contains 260B tokenized tokens from [DCLM-Baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) in array_record format.
+You may direct download training data for llama3 models from [here](https://huggingface.co/datasets/Zephyr271828/dclm-260b/tree/main), which contains 260B tokenized tokens from [DCLM-Baseline-1.0](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0) in array_record format.
 
 You may also want to refer to the [data preparation doc](getting_started/Data_Input_Pipeline.md) by MaxText to create your own customized dataset.
 

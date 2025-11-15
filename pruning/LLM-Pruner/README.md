@@ -1,5 +1,7 @@
 # LLM-Pruner
 
+This is the official implementation of LLM-Pruner by Ma et al. For the original README, please see [here](ORIGINAL_README.md).
+
 ## Installation
 ```bash
 bash scripts/install.sh
@@ -17,7 +19,7 @@ Base Model=Llama-7B; Ratio=0.25
 | Source | Method | Importance Estimation | WikiText2 | PTB | BoolQ | PIQA | Hellaswag | Winogrande | ARC-E | ARC-C | OBQA | 
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Paper | -       | -         | 12.6 | 22.1 | 73.2 | 78.4 | 73.0 | 67.0 | 67.5 | 41.4 | 42.4 |
-| Ours  | -       | -         | 12.6 |      | 73.1 | 78.4 | 73.0 | 67.1 | 67.5 | 41.4 | 42.4 |
+| Ours  | -       | -         | 5.69 | 29.8 | 73.1 | 78.4 | 73.0 | 67.1 | 67.5 | 41.4 | 42.4 |
 | Paper | Block   | Element 1 | 19.1 |      | 57.1 | 75.7 | 66.8 | 59.8 | 60.9 | 36.5 | 40.0 |
 | Ours  | Block   | Element 1 | 
 | Paper | L2      | -         | 582  | 1022 | 59.8 | 58.0 | 37.0 | 52.4 | 33.1 | 28.6 | 29.8 | 
@@ -32,3 +34,7 @@ Base Model=Llama-7B; Ratio=0.25
 | Ours  | Block   | Element 2 | 
 | Paper | Block   | Vector    | 22.3 | 41.8 | 61.4 | 71.7 | 57.3 | 54.2 | 55.8 | 34.0 | 38.4 |
 | Ours  | Block   | Vector    | 
+
+## References
+1. [LLM-Pruning paper](https://arxiv.org/abs/2305.11627)
+2. [LLM-Pruning codebase](https://github.com/horseee/LLM-Pruner)

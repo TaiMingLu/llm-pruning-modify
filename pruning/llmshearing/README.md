@@ -1,6 +1,8 @@
 # Sheared Llama
 
-This is an organized version of the officisal implementation of Sheared Llama by Xia et al. Specifically, we fixed the [incompatibility with flash-attn2](https://github.com/princeton-nlp/LLM-Shearing?tab=readme-ov-file#install-requirements) and [loss NaN issue](https://github.com/princeton-nlp/LLM-Shearing/issues/34) in the original release.
+This is an organized version of the officisal implementation of Sheared Llama by Xia et al. Specifically, we fixed the [incompatibility with flash-attn2](https://github.com/princeton-nlp/LLM-Shearing?tab=readme-ov-file#install-requirements) and [loss NaN issue](https://github.com/princeton-nlp/LLM-Shearing/issues/34) in the original release. 
+
+For the original README, please see [here](ORIGINAL_README.md).
 
 ## Installation 
 ```bash

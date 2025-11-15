@@ -1,6 +1,10 @@
 # Pruning
 
 **Pruning Methods Overview**
+Pruning Granularity:
+![](figs/pruning-overview-verbose.png)
+
+Pruning Methods:
 ![](figs/pruning-overview.png)
 
 **Road Map**
