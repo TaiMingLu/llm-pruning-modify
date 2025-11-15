@@ -11,10 +11,13 @@
 #SBATCH --mem=128GB
 #SBATCH --time=12:00:00
 #SBATCH --gres=gpu:1
+#SBATCH --exclude=neu306
 
 #SBATCH --mail-type=all
 #SBATCH --mail-user=yx1168@princeton.edu
 
+source $(conda info --base)/etc/profile.d/conda.sh
+conda activate llm-pruner
 
 PROJ_DIR=$(pwd)
 

@@ -15,8 +15,6 @@ bash scripts/install.sh
 Run the following command to replicate the results in the minitron paper.
 ```bash
 bash scripts/prune_llama3.1-8b.sh
-
-python plot_scores.py 
 ```
 
 **Results**
