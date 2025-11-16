@@ -6,7 +6,6 @@ PROJ_DIR=$(pwd)
 
 source $(conda info --base)/etc/profile.d/conda.sh
 conda activate fms_fsdp
-export PYTHONPATH=$PROJ_DIR/..:${PYTHONPATH:-''}
 
 PROJ_DIR=$(pwd)
 ckpt_dir=$PROJ_DIR/../../checkpoints
