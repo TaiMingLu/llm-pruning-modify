@@ -74,11 +74,11 @@ HF_MODEL_NAME= # the basename of the huggingface checkpoint
 DIRECT_RUN_NAME= # the basename of the param-only checkpoint
 STEP= # the step to choose in the **orbax checkpoint**
 TASKS= # optionally to only eval the model on a subset of tasks (comma-separated list of task names)
-scripts/convert.sh hf_to_orbax     --model=$MODEL --orbax_ckpt_name=$ORBAX_CKPT_NAME --hf_model_name=$HF_MODEL_NAME
-scripts/convert.sh gen_param_ckpt  --model=$MODEL --orbax_ckpt_name=$ORBAX_CKPT_NAME --step=$STEP                    --direct_run_name=$DIRECT_RUN_NAME
-scripts/convert.sh orbax_to_hf     --model=$MODEL --orbax_ckpt_name=$ORBAX_CKPT_NAME --step=$STEP                    --hf_model_name=$HF_MODEL_NAME
-scripts/convert.sh logits_test     --model=$MODEL --direct_run_name=$DIRECT_RUN_NAME --hf_model_name=$HF_MODEL_NAME
-scripts/convert.sh eval            --model=$MODEL --direct_run_name=$DIRECT_RUN_NAME --hf_model_name=$HF_MODEL_NAME [--tasks=$TASKS]
+bash scripts/convert.sh hf_to_orbax     --model=$MODEL --orbax_ckpt_name=$ORBAX_CKPT_NAME --hf_model_name=$HF_MODEL_NAME
+bash scripts/convert.sh gen_param_ckpt  --model=$MODEL --orbax_ckpt_name=$ORBAX_CKPT_NAME --step=$STEP                    --direct_run_name=$DIRECT_RUN_NAME
+bash scripts/convert.sh orbax_to_hf     --model=$MODEL --orbax_ckpt_name=$ORBAX_CKPT_NAME --step=$STEP                    --hf_model_name=$HF_MODEL_NAME
+bash scripts/convert.sh logits_test     --model=$MODEL --direct_run_name=$DIRECT_RUN_NAME --hf_model_name=$HF_MODEL_NAME
+bash scripts/convert.sh eval            --model=$MODEL --direct_run_name=$DIRECT_RUN_NAME --hf_model_name=$HF_MODEL_NAME [--tasks=$TASKS]
 ```
 
 
